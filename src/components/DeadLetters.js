@@ -3,11 +3,19 @@ import styled from "styled-components";
 
 import { colors } from "./GlobalStyles";
 
-const DeadLetters = ({}) => {
+
+
+const DeadLetters = ({letters}) => {
+
+  const theLetters = letters.map((letter) =>
+  <Letter key={letter}>   
+     {letter}
+  </Letter>
+);
   return (
     <Wrapper>
       <h2>Dead Letters</h2>
-      <List></List>
+        <List>{theLetters}</List>
     </Wrapper>
   );
 };
